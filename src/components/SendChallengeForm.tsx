@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useChallenges } from '@/hooks/useChallenges';
 import { CATEGORIES, DIFFICULTIES } from '@/lib/types';
 
