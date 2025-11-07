@@ -1,3 +1,30 @@
+export interface Challenge {
+  id: string;
+  title: string;
+  description: string;
+  points: number;
+  category: string;
+  difficulty: string;
+}
+
+export interface SentChallenge {
+  id: string;
+  sender_id: string;
+  receiver_id: string;
+  challenge_id: string;
+  status: 'pending' | 'accepted' | 'refused' | 'completed';
+  challenge?: Challenge;
+  sender?: {
+    username: string;
+  };
+}
+
+export interface CompletedChallenge {
+  id: string;
+  user_id: string;
+  challenge_id: string;
+}
+
 export interface Category {
   id: string;
   name: string;
